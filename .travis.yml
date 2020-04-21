@@ -177,7 +177,7 @@ jobs:
         GOAL="install"
         BITCOIN_CONFIG="--enable-zmq --with-incompatible-bdb --with-gui=qt5 CPPFLAGS=-DDEBUG_LOCKORDER --disable-hardening --disable-asm"
 
-- stage: test
+    - stage: test
       name: 'x86_64 Linux  [GOAL: install]  [bionic]  [no depends, only system libs]'
       env: >-
         HOST=x86_64-unknown-linux-gnu
@@ -218,7 +218,7 @@ jobs:
         GOAL="deploy"
         BITCOIN_CONFIG="--enable-gui --enable-reduce-exports --enable-werror"
 
-- stage: cmake
+    - stage: cmake
       name: 'CMake Linux'
       language: cpp
       compiler:
