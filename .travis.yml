@@ -60,8 +60,8 @@ before_install:
   - set -o errexit; source .travis/test_03_before_install.sh
 install:
   - set -o errexit; source .travis/test_04_install.sh
-before_script:
-  - set -o errexit; source .travis/test_05_before_script.sh
+#before_script:
+#  - set -o errexit; source .travis/test_05_before_script.sh
 script:
   - export CONTINUE=1
   - if [ $SECONDS -gt 1200 ]; then export CONTINUE=0; fi  # Likely the depends build took very long
